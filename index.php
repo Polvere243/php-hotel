@@ -9,41 +9,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hotels</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
     <ul>
-        <?php foreach ($hotels as $hotel) : ?>
+        <table>
+            <tr>
+            <?php foreach ($hotels as $hotel) : ?>
             <?php foreach ($hotel as $key => $building) :?>
-               <table>
-                <tr>
-                    <th>
-                        <?= $key ?>
-                    </th>
-                </tr>
-                <tr>
-                    <td>
-                        <?= $building['name'] ?>
-                    </td>
-                    <td>
-                        <?= $building['description'] ?>
-                    </td>
-                    <td>
-                        <?= $building['parking'] ?>
-                    </td>
-                    <td>
-                        <?= $building['vote'] ?>
-                    </td>
-                    <td>
-                        <?= $building['distance_to_center'] ?>
-                    </td>
-                </tr>
+                <th>
+                    <?= $key ?>
+                </th>
+            <?php endforeach ?>
+            </tr>
+            <tr>
+            <?php foreach ($hotels as $hotel) :?>
+                <td>
+                    <?= $hotel['name'] ?>
+                </td>
+                <td>
+                    <?= $hotel['description'] ?>
+                </td>
+                <td>
+                    <?= $hotel['parking'] ?>
+                </td>
+                <td>
+                    <?= $hotel['vote'] ?>
+                </td>
+                <td>
+                    <?= $hotel['distance_to_center'] ?>
+                </td>
+            </tr>
+            <?php endforeach ?>
+            <?php endforeach ?>
                 
 
-               </table>  
+        </table>  
                 
                 
-            <?php endforeach ?>
-        <?php endforeach ?>
+            
     </ul>
 </body>
 </html>    
