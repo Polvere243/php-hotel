@@ -13,7 +13,7 @@
 
 </head>
 <body>
-    <ul>
+    <div class="container">
         <table>
             <tr>
             <?php foreach ($hotels as $hotel) : ?>
@@ -43,12 +43,7 @@
             </tr>
             <?php endforeach ?>
             <?php endforeach ?>
-                
-
         </table>  
-                
-                
-            
-    </ul>
+    </div>
 </body>
 </html>    
