@@ -12,16 +12,23 @@
     <link rel="stylesheet" href="css/style.css">
 
 </head>
+
 <body>
+    <header>
+        <div>
+            <h1>Hotels</h1>
+        </div>
+    </header>
     <div class="container">
         <table>
             <tr>
-            <?php foreach ($hotels as $hotel) : ?>
-            <?php foreach ($hotel as $key => $building) :?>
-                <th>
-                    <?= $key ?>
-                </th>
-            <?php endforeach ?>
+                <?php foreach ($hotels as $hotel) : ?>
+                    <?php foreach ($hotel as $key => $building) :?>
+                        <th>
+                            <?= $key ?>
+                        </th>
+                    <?php endforeach ?>
+                <?php endforeach ?>
             </tr>
             <tr>
             <?php foreach ($hotels as $hotel) :?>
@@ -42,7 +49,7 @@
                 </td>
             </tr>
             <?php endforeach ?>
-            <?php endforeach ?>
+            
         </table>  
     </div>
 </body>

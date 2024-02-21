@@ -6,6 +6,18 @@
     box-sizing: border-box;
 }
 
+
+/* intestazione */
+header{
+    padding-top: 10px;
+    height: 80px;
+}
+
+header div{
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
 /* contenitore */
 
 .container{
