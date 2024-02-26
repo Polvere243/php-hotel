@@ -17,18 +17,24 @@
     <header>
         <div>
             <h1>Hotels</h1>
+        <form action="" method="GET">
+            <div>
+                <label for="no">Senza parcheggio</label>
+                <input type="checkbox" name="parking" id="no">
+            </div>
+            <button class="btn" type="submit">Filtra</button>
+        </form>
         </div>
     </header>
     <div class="container">
         <table>
             <tr>
-                <?php foreach ($hotels as $hotel) : ?>
-                    <?php foreach ($hotel as $key => $building) :?>
-                        <th>
-                            <?= $key ?>
-                        </th>
-                    <?php endforeach ?>
-                <?php endforeach ?>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Parking</th>
+                <th>Vote</th>
+                <th>Distance</th>
+                    
             </tr>
             <tr>
             <?php foreach ($hotels as $hotel) :?>
@@ -39,7 +45,8 @@
                     <?= $hotel['description'] ?>
                 </td>
                 <td>
-                    <?= $hotel['parking'] ?>
+
+                    <?= $hotel['parking'] ? 'Yes' : 'No' ?>
                 </td>
                 <td>
                     <?= $hotel['vote'] ?>

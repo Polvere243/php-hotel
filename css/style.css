@@ -1,6 +1,6 @@
 /* css reset */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,19 +8,34 @@
 
 
 /* intestazione */
-header{
-    padding-top: 10px;
+header {
     height: 80px;
 }
 
-header div{
+header div {
     max-width: 1080px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
+
+h1 {
+    display: inline-block;
+}
+
+/* modulo */
+
+.btn {
+    color: white;
+    padding: 5px 10px;
+    background-color: darkviolet;
+}
+
 
 /* contenitore */
 
-.container{
+.container {
     max-width: 1080px;
     margin: 0 auto;
 
@@ -28,12 +43,14 @@ header div{
 
 /* tabella */
 
-table{
+table {
     width: 100%;
-    text-align: center;
+
 }
 
 th,
-td{
-    margin: 10px 0;
+td {
+    margin: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid;
 }
