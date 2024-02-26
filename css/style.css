@@ -32,6 +32,10 @@ h1 {
     background-color: darkviolet;
 }
 
+.number {
+    padding: 5px 10px;
+}
+
 
 /* contenitore */
 
@@ -49,6 +53,7 @@ table {
 }
 
 th,
+tr,
 td {
     margin: 20px 0;
     text-align: center;

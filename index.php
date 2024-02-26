@@ -1,7 +1,19 @@
 <?php
-    require 'data/data.php'
+    require 'data/data.php';
+    $checked = '';
+    if(isset($_GET['parking'])){
+        $checked = 'checked';
 
-    ?>
+        $filtered_hotels = [];
+        foreach ($hotels as $hotel) {
+            if ($hotel['parking']) $filterd_hotels[] = $hotel;
+            
+        }
+        $hotels = $filtered_hotels;
+       
+    }
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -19,9 +31,10 @@
             <h1>Hotels</h1>
         <form action="" method="GET">
             <div>
-                <label for="no">Senza parcheggio</label>
-                <input type="checkbox" name="parking" id="no">
+                <label for="yes">Con parcheggio</label>
+                <input type="checkbox" name="parking" id="yes" <?= $checked ?? '' ?>>
             </div>
+            <!-- <input class="number" type="number" min="1" max="5" name="rate"> -->
             <button class="btn" type="submit">Filtra</button>
         </form>
         </div>
